@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block start %}
+
+<h1>{{object_list.name}}</h1>
+<p>{{object_list.pk}}</p>
+
+<p>{{object_list.description}}</p>
+<img src="{{ object_list.image.url }}">
+<a href="{% url 'dress:update' object_list.pk%}">update</a>
+<a href="{% url 'dress:delete' object_list.pk%}">delete</a>
+{% endblock%}
